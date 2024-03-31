@@ -20,11 +20,11 @@ span .header-text{
 
 }
 .container{
-    margin: 80px auto;
+    margin: 30px auto;
     padding: 20px;
     display: block;
-    width: 480px;
-    height: 520px;
+    width: 460px;
+    height: 600px;
     box-shadow: 0px 10px 15px 6px #c9bbbb;
     border-radius: 5px;
 }
