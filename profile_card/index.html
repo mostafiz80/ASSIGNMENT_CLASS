@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <title>Profile Card</title>
 </head>
+
 <body>
-    <div class="container">
-        <span class="header-text">Profile</span>
+    <div class="card">
+        <span class="card-title">PRO</span>
         <div class="profile-photo">
             <img class="profilephoto" src="images/profile-img.jpg" alt="">
         </div>
-        <h1>Mostafizur Rahman</h1>
-        <h3>Full Stack Web Developer</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non numquam unde debitis earum quas maiores iure dolore, rem nesciunt doloribus.</p>
+        <h1 class="name">Mostafizur Rahman</h1>
+        <h2 class="occupation">Full Stack Web Developer</h2>
+        <p class="short-description">
+            Greetings! I'm Mostafizur Rahman, a seasoned web developer with 10 years of industry expertise. I specialize
+            in crafting flawless digital solutions, excelling in PHP, HTML, CSS, WordPress, Linux, and Web Hosting
+            Setup.
+        </p>
+
+        <div id="statistic">
+            <div>
+                <h4>Projects</h4>
+                <h5>218</h5>
+            </div>
+            <div>
+                <h4>Following</h4>
+                <h5>218</h5>
+            </div>
+            <div>
+                <h4>Follower</h4>
+                <h5>218</h5>
+            </div>
+        </div>
+        <div class="follower-buttons">
+            <button class="btn follow">Follow</button>
+            <button class="btn primary">Hire Me</button>
+        </div>
     </div>
 </body>
+
 </html>
