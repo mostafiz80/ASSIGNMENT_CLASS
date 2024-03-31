@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+
+h1, h2, h3, h4, h5{
+    color: #000000;
+}
+
+h2{
+    color: #545454;
+}
+
+p {
+
+}
+span .header-text{
+
+}
+.container{
+    margin: 80px auto;
+    padding: 20px;
+    display: block;
+    width: 480px;
+    height: 520px;
+    box-shadow: 0px 10px 15px 6px #c9bbbb;
+    border-radius: 5px;
+}
+.header-text{
+
+}
+.profile-photo img{
+    width: 100px;
+    height: 100px;
+}
