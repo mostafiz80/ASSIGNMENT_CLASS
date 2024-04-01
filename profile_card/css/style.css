@@ -1,153 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
+@import
+url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
 
 body{
-    background-color: rgb(255, 255, 255);
-    font-family: arial, sans-serif;
-    font-size: 14px;
+font-family: arial, sans-serif;
+font-size: 14px;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #EFEFEF;
+
 }
 
 
 h1, h2, h3, h4, h5{
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #000000;
+font-family: "Ubuntu", sans-serif;
+font-weight: 700;
+font-style: normal;
+color: #000000;
 }
 
 h2{
-    color: #545454;
+color: #545454;
 }
 
 p {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.2rem;
-    color: #413f3f;
+font-family: "Josefin Sans", sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 1.2rem;
+color: #413f3f;
 }
 span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: larger;
 }
 
 .card{
+    background-color: #fff;
     margin: 30px auto;
-    padding: 25px;
+    padding: 0;
     display: block;
     width: 480px;
     height: 600px;
-    box-shadow: 0px 10px 15px 6px #c9bbbb;
-    border-radius: 5px;
+    box-shadow: 0px 10px 11px 5px #c0d1d3;
+    border-radius: 20px;
 }
+.card-header{
+    padding: 20px;
+    left: 0;
+    top: 0;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 0;
+}
+
+
+
 .card-title{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    font-size: larger;
-    color: #FCFCFC;
-    background-color: #888888;
-    padding: 5px;
-    margin: 0px;
-    border-radius: 5px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold;
+font-size: larger;
+color: #FCFCFC;
+background-color: #888888;
+padding: 5px;
+margin: 0px;
+border-radius: 5px;
 }
-
-
-.profile-photo img{
+.profile-photo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    height: 40%;
-    border-radius: 100%;
-    box-shadow: 0px 0px 5px 5px rgb(120, 125, 192)
 }
+.profile-photo img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 30%;
+height: 30%;
+border: 8px solid #fff;
+border-radius: 100%;
+box-shadow: 0px 0px 5px 5px rgb(186, 187, 197)
+}
+
+
 .profile-photo img:hover{
-    box-shadow: 0px 0px 5px 5px rgb(228, 228, 230)
+box-shadow: 0px 0px 5px 5px rgb(228, 228, 230)
 }
 
 .name {
-
-    font-size: 2.5rem;
-    text-align: center;
-    width: 100%;
-    line-height:0.5;
+font-size: 2.5rem;
+text-align: center;
+width: 100%;
+line-height:0.5;
 }
 .occupation {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.5rem;
-    text-align: center;
-    line-height:0;
+font-family: "Poppins", sans-serif;
+font-weight: 700;
+font-style: normal;
+font-size: 1.5rem;
+text-align: center;
+line-height:0;
 }
 
 .short-description{
-
-    text-align: justify;
-    text-justify: inter-word;
-    word-spacing: 0px;
-    padding: 20px;
-    line-height: 0.9;
-    margin: 0;
+text-align: center;
+padding-left: 50px;
+padding-right: 50px;
+line-height: 0.9;
+margin: 0;
 }
 .contact-info{
-    margin: 0;
+margin: 0;
 }
 #statistic {
-    width: 100%;
-    height: 100px;
-    display: flex;
+width: 100%;
+height: 100px;
+display: flex;
 
 }
-#statistic  div{
-    padding: 10px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 30%;
-    line-height: 0;
-    text-align: center;
-    color: #413f3f;
+#statistic div{
+padding: 10px;
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 30%;
+line-height: 0;
+text-align: center;
+color: #413f3f;
+}
+#statistic h4:first-of-type{
+font-size: 0.9rem;
+color: #413f3f;
 }
 #statistic h4{
-    font-size: 0.9rem;
-    color: #413f3f;
-    
-}
-#statistic h5{
-    font-size: 1rem;
-    color: #413f3f;
+font-size: 1.4rem;
+color: #413f3f;
 }
 
 .follower-buttons{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Times New Roman', Times, serif;
-    width: 60%;
-    line-height: 0;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+font-family: 'Times New Roman', Times, serif;
+line-height: 0;
+justify-content: center;
 }
 
 .btn {
-    font-weight: bolder;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    padding: 10px 20px 10px 20px;
+font-weight: bolder;
+font-size: 1.5rem;
+border-radius: 8px;
+padding: 10px 20px 10px 20px;
+text-transform: uppercase;
+}
+
+.gap{
+    margin-right: 30px;
 }
 .follow {
-    background-color: #ffffff;
+background-color: #ffffff;
 }
 .follow:hover {
-    background-color: #020202;
-    color: #ffffff;
-    cursor: pointer;
+background-color: #020202;
+color: #ffffff;
+cursor: pointer;
 }
 
 .primary{
-    background-color: #111111;
-    color: #ffffff;
+background-color: #111111;
+color: #ffffff;
 }
 .primary:hover{
-    background-color: #3b3636;
-    color: #ffffff;
-    cursor: pointer;
-    box-shadow: 0 0 5px 5px rgb(80, 74, 74);
+background-color: #3b3636;
+color: #ffffff;
+cursor: pointer;
+box-shadow: 0 0 5px 5px rgb(80, 74, 74);
 }
