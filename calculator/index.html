@@ -25,12 +25,12 @@
                 <form id="calculator" class="row g-3">
                     <div class="col-md-2">
                         <label for="inputnumber_one" class="form-label">Number 1</label>
-                        <input type="number" class="form-control" id="inputnumber_first" value="0" required>
+                        <input type="number" class="form-control" id="inputnumber_first" step="0.001" value="0.000" required>
                     </div>
                     <div class="col-md-2">
                         <label for="operator" class="form-label">Operator</label>
                         <select id="operator" class="form-select" name="operator" required>
-                            <option selected>Choose...</option>
+                            <option selected value="">Choose...</option>
                             <option value="addition">+</option>
                             <option value="subtraction">-</option>
                             <option value="multiplication">*</option>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-2">
                         <label for="inputnumber_second" class="form-label">Number 2</label>
-                        <input type="number" class="form-control" id="inputnumber_second" value="0" required>
+                        <input type="number" class="form-control" id="inputnumber_second" step="0.001" value="0.000" required>
                     </div>
                     <div class="col-12">
                         <div class="form-check">
@@ -84,6 +84,7 @@
                 <div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
                     Calculation Result
                 </div>
+                
                 <div id="displayresult" class="alert alert-primary" role="alert">
                     A simple primary alert—check it out!
                 </div>
