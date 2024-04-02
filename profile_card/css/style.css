@@ -1,7 +1,7 @@
 @import
 url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
 
-/*  Organic CSS code written by Mostafiz :) */
+/* Organic CSS code written by Mostafiz :) */
 
 body{
 font-family: "Ubuntu", sans-serif;
@@ -38,21 +38,23 @@ font-size: larger;
 }
 
 .card{
-    background-color: #fff;
-    margin: 30px auto;
-    padding: 0;
-    display: block;
-    width: 480px;
-    height: 600px;
-    box-shadow: 0px 10px 11px 5px #c0d1d3;
-    border-radius: 20px;
+background-color: #fff;
+margin: 30px auto;
+padding: 0;
+display: block;
+width: 480px;
+height: 600px;
+box-shadow: 0px 10px 11px 5px #c0d1d3;
+border-radius: 20px;
 }
+
+
 .card-header{
-    padding: 20px;
-    left: 0;
-    top: 0;
-    background-color: #4070F4;
-    border-radius: 25px 25px 0 0;
+padding: 20px;
+left: 0;
+top: 0;
+background-color: #4070F4;
+border-radius: 25px 25px 0 0;
 }
 
 .card-title{
@@ -66,9 +68,9 @@ margin: 0px;
 border-radius: 5px;
 }
 .profile-photo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 .profile-photo img{
 display: block;
@@ -108,30 +110,36 @@ line-height: 0.9;
 margin: 0;
 }
 
-#statistic {
+#contact-informaton {
 width: 100%;
-height: 100px;
+height: auto;
 display: flex;
 
 }
-#statistic div{
+#contact-informaton svg{
+width: 40px;
+height: 40px;
+position: relative;
+
+}
+#contact-informaton div{
+display: inline-block;
 padding: 10px;
 flex-grow: 0;
 flex-shrink: 0;
-flex-basis: 30%;
-line-height: 0;
+flex-basis: 45%;
+line-height: normal;
 text-align: center;
 color: #413f3f;
 }
 
-#statistic h4:first-of-type{
-font-size: 0.9rem;
+#contact-informaton h4:first-of-type{
 color: #413f3f;
 }
 
-#statistic h4{
-font-size: 1.4rem;
+#contact-informaton h4{
 color: #413f3f;
+line-height: 0px;
 }
 
 .follower-buttons{
@@ -152,7 +160,7 @@ text-transform: uppercase;
 }
 
 .gap{
-    margin-right: 30px;
+margin-right: 30px;
 }
 .follow {
 background-color: #ffffff;
@@ -164,12 +172,20 @@ cursor: pointer;
 }
 
 .primary{
-background-color: #111111;
+background-color: #4070F4;
 color: #ffffff;
 }
 .primary:hover{
-background-color: #3b3636;
+background-color: #174bdb;
 color: #ffffff;
 cursor: pointer;
-box-shadow: 0 0 5px 5px rgb(80, 74, 74);
+box-shadow: 0 0 5px 5px rgb(16, 23, 131);
+}
+.vertical-line{
+    --mdb-divider-blurry-vr-bg-image: linear-gradient(180deg, transparent, hsl(0, 0%, 40%), transparent);
+    --mdb-divider-blurry-vr-width: 2px;
+    --mdb-divider-blurry-opacity: 0.25;
+    background-image: var(--mdb-divider-blurry-vr-bg-image);
+    width: var(--mdb-divider-blurry-vr-width);
+    opacity: var(--mdb-divider-blurry-opacity);
 }
