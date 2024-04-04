@@ -6,17 +6,24 @@ function getInputAndCalculate() {
     let Operator = document.getElementById("operator").value;
 
     if (validateForm(FirstInput, SecondInputs, Operator)) {
-        var result = calculators(FirstInput, SecondInputs, Operator);
-        let element = document.getElementById("displayresult");
-        element.classList.remove("alert-danger", "alert-primary", "alert-success");
-        element.classList.add("alert-success");
-        echo("Result " + result.toFixed(3), "displayresult");
-        //document.getElementById("calculator").reset();
+        if (Operator == "division") {
+            if (SecondInputs == "0") {
+                displayFailed("Divide by zero is not possible")
+                element2 = document.getElementById('inputnumber_second');
+                element2.classList.remove("is-valid");
+                element2.classList.add("is-invalid");
+            } else {
+                var result = calculators(FirstInput, SecondInputs, Operator);
+                displaySuccessResult(result.toFixed(3));
+            }
+        } else {
+            var result = calculators(FirstInput, SecondInputs, Operator);
+            displaySuccessResult(result.toFixed(3));
+            //document.getElementById("calculator").reset();
+        }
+
     } else {
-        let element = document.getElementById("displayresult");
-        element.classList.remove("alert-danger", "alert-primary", "alert-success");
-        element.classList.add("alert-danger");
-        element.innerHTML = "All the field must be filled";
+      displayFailed("All the field must be filled")
     }
 }
 
@@ -79,7 +86,7 @@ function calculators(firstInput, secondInputs, operator){
 }
 
 function checkInputIisValid(myuserInput){
-    if (myuserInput == 0 || myuserInput == "" || myuserInput == null || myuserInput == undefined || isNaN(myuserInput)) {
+    if (myuserInput == null || myuserInput == undefined || isNaN(myuserInput)) {
         return false;
     } else {
         return true;
@@ -114,6 +121,23 @@ function echo(data, element){
 }
 function addClass(element, classname){
     element.classList.add(classname);
+}
+
+function displaySuccessResult(successresult){
+    let element = document.getElementById("displayresult");
+    element.classList.remove("alert-danger", "alert-primary", "alert-success");
+    element.classList.add("alert-success");
+    echo(successresult, "displayresult");
+}
+function displayFailed(failedmsg){
+    let element = document.getElementById("displayresult");
+    element.classList.remove("alert-danger", "alert-primary", "alert-success");
+    element.classList.add("alert-danger");
+    echo(failedmsg, "displayresult");
+}
+
+function invalid(){
+    
 }
 
 
