@@ -18,8 +18,6 @@ function getInputAndCalculate() {
         element.classList.add("alert-danger");
         element.innerHTML = "All the field must be filled";
     }
-
-
 }
 
 function validateForm(FirstInput, SecondInputs, Operator){

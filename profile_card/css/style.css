@@ -15,7 +15,6 @@ background-color: #EFEFEF;
 
 
 h1, h2, h3, h4, h5, a{
-font-family: "Ubuntu", sans-serif;
 font-weight: 700;
 font-style: normal;
 color: #000000;
@@ -88,7 +87,7 @@ box-shadow: 0px 0px 5px 5px rgb(228, 228, 230)
 }
 
 .name {
-    font-family:"Montserrat", sans-serif;
+font-family:"Montserrat", sans-serif;
 font-size: 2.5rem;
 text-align: center;
 width: 100%;
@@ -112,6 +111,7 @@ margin: 35px auto;
 }
 
 #contact-informaton {
+font-family: "Poppins", sans-serif;
 width: 100%;
 height: auto;
 display: flex;
@@ -145,10 +145,10 @@ line-height: 0px;
 
 
 .vertical-line{
-    --mdb-divider-blurry-vr-bg-image: linear-gradient(180deg, transparent, hsl(0, 0%, 40%), transparent);
-    --mdb-divider-blurry-vr-width: 2px;
-    --mdb-divider-blurry-opacity: 0.25;
-    background-image: var(--mdb-divider-blurry-vr-bg-image);
-    width: var(--mdb-divider-blurry-vr-width);
-    opacity: var(--mdb-divider-blurry-opacity);
+--mdb-divider-blurry-vr-bg-image: linear-gradient(180deg, transparent, hsl(0, 0%, 40%), transparent);
+--mdb-divider-blurry-vr-width: 3px;
+--mdb-divider-blurry-opacity: 0.25;
+background-image: var(--mdb-divider-blurry-vr-bg-image);
+width: var(--mdb-divider-blurry-vr-width);
+opacity: var(--mdb-divider-blurry-opacity);
 }
