@@ -10,7 +10,7 @@ function getInputAndCalculate() {
         let element = document.getElementById("displayresult");
         element.classList.remove("alert-danger", "alert-primary", "alert-success");
         element.classList.add("alert-success");
-        document.getElementById("displayresult").innerHTML = "Result "+result.toFixed(3);
+        echo("Result " + result.toFixed(3), "displayresult");
         //document.getElementById("calculator").reset();
     } else {
         let element = document.getElementById("displayresult");
@@ -23,35 +23,40 @@ function getInputAndCalculate() {
 }
 
 function validateForm(FirstInput, SecondInputs, Operator){
-    if (FirstInput == "") {
-        document.getElementById('inputnumber_first').classList.remove("is-valid");
-        document.getElementById('inputnumber_first').classList.add("is-invalid");
+    let element;
+    if (!checkInputIisValid(FirstInput)) {
+        element = document.getElementById('inputnumber_first')
+        element.classList.remove("is-valid");
+        element.classList.add("is-invalid");
     }else{
-        document.getElementById('inputnumber_first').classList.remove("is-invalid");
-        document.getElementById('inputnumber_first').classList.add("is-valid");
+        element = document.getElementById('inputnumber_first');
+        element.classList.remove("is-invalid");
+        element.classList.add("is-valid");
     }
-    if (SecondInputs =="") {
-        document.getElementById('inputnumber_second').classList.remove("is-valid");
-        document.getElementById('inputnumber_second').classList.add("is-invalid");
+    if (!checkInputIisValid(SecondInputs) ) {
+        element = document.getElementById('inputnumber_second');
+        element.classList.remove("is-valid");
+        element.classList.add("is-invalid");
     }else{
-        document.getElementById('inputnumber_second').classList.remove("is-invalid");
-        document.getElementById('inputnumber_second').classList.add("is-valid");
+        element = document.getElementById('inputnumber_second');
+        element.classList.remove("is-invalid");
+        element.classList.add("is-valid");
     }
-    if (Operator == "") {
-        document.getElementById('operator').classList.remove("is-valid");
-        document.getElementById('operator').classList.add("is-invalid");
+    if (!checkOperatorIsValid(Operator)) {
+        element = document.getElementById('operator');
+        element.classList.remove("is-valid");
+        element.classList.add("is-invalid");
     }else{
-        document.getElementById('operator').classList.remove("is-invalid");
-        document.getElementById('operator').classList.add("is-valid");
+        element = document.getElementById('operator');
+        element.classList.remove("is-invalid");
+        element.classList.add("is-valid");
     }
 
-
-
-   if ((FirstInput != "" &&  SecondInputs != "") && (Operator != "")) {
-    return true;
-   } else {
-    return false;
-   }
+    if (checkInputIisValid(FirstInput) && checkInputIisValid(SecondInputs) && checkOperatorIsValid(Operator)) {
+        return true;
+    } else {
+        return false;
+    }
  
 }
 
@@ -60,28 +65,59 @@ function calculators(firstInput, secondInputs, operator){
     switch(operator) {
         case "addition":
             result = (firstInput + secondInputs);
-
           break;
         case "subtraction":
             result =  (firstInput - secondInputs);
-
           break;
         case "multiplication":
             result =  (firstInput * secondInputs);
-
           break;
         case "division":
             result =  (firstInput / secondInputs);
           break;
-
       }
-
       return result;
-      
+    
+}
+
+function checkInputIisValid(myuserInput){
+    if (myuserInput == 0 || myuserInput == "" || myuserInput == null || myuserInput == undefined || isNaN(myuserInput)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+function checkOperatorIsValid(operators){
+    if (operators == 0 || operators == "" || operators == null || operators == undefined) {
+        return false;
+    } else {
+        return true;
+    }
 }
 function resetform(){
-    //document.getElementById("calculator").reset();
+    document.getElementById("calculator").reset();
+    element = document.getElementById('inputnumber_first')
+    element.classList.remove("is-valid", "is-invalid");
+    
+    element = document.getElementById('inputnumber_second');
+    element.classList.remove("is-valid", "is-invalid");
+
+    element = document.getElementById('operator');
+    element.classList.remove("is-valid", "is-invalid");
+
+    echo("Fill in the form and calculate —> check it out!", "displayresult");
+    element = document.getElementById("displayresult");
+    element.classList.remove("alert-danger", "alert-primary", "alert-success");
+    addClass(element, "alert-primary");
 }
+
+function echo(data, element){
+    document.getElementById(element).innerHTML = data;
+}
+function addClass(element, classname){
+    element.classList.add(classname);
+}
+
 
 
 
