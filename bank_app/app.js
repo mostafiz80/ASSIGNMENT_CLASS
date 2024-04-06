@@ -34,20 +34,15 @@ const account2 = new BankAccount(2400002, "Sumon Hawladar", 500);
 
 console.log("Initial  Account Information:");
 console.log("------------------------------------------------------------------------->");
-account1.displayAccountInfo();
+
 account1.deposit(200);
 account1.withdraw(400);
-
-console.log(" ");
-account2.displayAccountInfo();
-account2.deposit(100);
-account2.withdraw(700); 
-account2.withdraw(600); 
-
-console.log(" ");
-console.log("Updated account infornation:");
-console.log("------------------------------------------------------------------------->");
 account1.displayAccountInfo();
 console.log(" ");
+
+account2.deposit(100);
+account2.withdraw(700); 
 account2.displayAccountInfo();
+
+
 

@@ -7,7 +7,7 @@ function getInputAndCalculate() {
 
     if (validateForm(FirstInput, SecondInputs, Operator)) {
         if (Operator == "division") {
-            if (SecondInputs == "0") {
+            if (!SecondInputs > "0") {
                 displayFailed("Divide by zero is not possible")
                 element2 = document.getElementById('inputnumber_second');
                 element2.classList.remove("is-valid");
