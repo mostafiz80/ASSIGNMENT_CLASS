@@ -31,30 +31,24 @@ function validateForm(FirstInput, SecondInputs, Operator){
     let element;
     if (!checkInputIisValid(FirstInput)) {
         element = document.getElementById('inputnumber_first')
-        element.classList.remove("is-valid");
-        element.classList.add("is-invalid");
+        invaild(element);
     }else{
         element = document.getElementById('inputnumber_first');
-        element.classList.remove("is-invalid");
-        element.classList.add("is-valid");
+        vaild(element);
     }
     if (!checkInputIisValid(SecondInputs) ) {
         element = document.getElementById('inputnumber_second');
-        element.classList.remove("is-valid");
-        element.classList.add("is-invalid");
+        invaild(element);
     }else{
         element = document.getElementById('inputnumber_second');
-        element.classList.remove("is-invalid");
-        element.classList.add("is-valid");
+        vaild(element);
     }
     if (!checkOperatorIsValid(Operator)) {
         element = document.getElementById('operator');
-        element.classList.remove("is-valid");
-        element.classList.add("is-invalid");
+        invaild(element);
     }else{
         element = document.getElementById('operator');
-        element.classList.remove("is-invalid");
-        element.classList.add("is-valid");
+        vaild(element);
     }
 
     if (checkInputIisValid(FirstInput) && checkInputIisValid(SecondInputs) && checkOperatorIsValid(Operator)) {
@@ -64,7 +58,6 @@ function validateForm(FirstInput, SecondInputs, Operator){
     }
  
 }
-
 function calculators(firstInput, secondInputs, operator){
     let result;
     switch(operator) {
@@ -82,7 +75,6 @@ function calculators(firstInput, secondInputs, operator){
           break;
       }
       return result;
-    
 }
 
 function checkInputIisValid(myuserInput){
@@ -115,7 +107,6 @@ function resetform(){
     element.classList.remove("alert-danger", "alert-primary", "alert-success");
     addClass(element, "alert-primary");
 }
-
 function echo(data, element){
     document.getElementById(element).innerHTML = data;
 }
@@ -136,8 +127,13 @@ function displayFailed(failedmsg){
     echo(failedmsg, "displayresult");
 }
 
-function invalid(){
-    
+function vaild(element){
+    element.classList.remove("is-invalid");
+    element.classList.add("is-valid");
+}
+function invaild(element){
+    element.classList.remove("is-valid");
+    element.classList.add("is-invalid");
 }
 
 
