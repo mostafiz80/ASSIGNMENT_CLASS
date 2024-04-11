@@ -91,22 +91,7 @@ function checkOperatorIsValid(operators){
         return true;
     }
 }
-function resetform(){
-    document.getElementById("calculator").reset();
-    element = document.getElementById('inputnumber_first')
-    element.classList.remove("is-valid", "is-invalid");
-    
-    element = document.getElementById('inputnumber_second');
-    element.classList.remove("is-valid", "is-invalid");
 
-    element = document.getElementById('operator');
-    element.classList.remove("is-valid", "is-invalid");
-
-    echo("Fill in the form and calculate —> check it out!", "displayresult");
-    element = document.getElementById("displayresult");
-    element.classList.remove("alert-danger", "alert-primary", "alert-success");
-    addClass(element, "alert-primary");
-}
 function echo(data, element){
     document.getElementById(element).innerHTML = data;
 }
